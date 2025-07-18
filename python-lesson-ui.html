@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Lesson Course</title>
+    <link rel="stylesheet" href="lesson-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>Python Interactive Course</h1>
+            <div class="header-controls">
+                <button class="btn-icon" id="settings-btn">⚙️</button>
+                <span class="user-info">@jeff-woost</span>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Question/Lesson Text Section (Top 3/4) -->
+                <section class="question-section">
+                    <div class="section-header">
+                        <h2>Lesson Content</h2>
+                        <span class="lesson-number">Lesson 1.1</span>
+                    </div>
+                    <div class="question-content">
+                        <!-- Question text will go here -->
+                        <p class="placeholder-text">Lesson content and instructions will appear here...</p>
+                    </div>
+                </section>
+
+                <!-- Terminal Section (Bottom 1/4) -->
+                <section class="terminal-section">
+                    <div class="terminal-header">
+                        <span class="terminal-title">🖥️ Terminal</span>
+                        <div class="terminal-controls">
+                            <button class="terminal-btn" id="clear-terminal">Clear</button>
+                            <button class="terminal-btn" id="restart-terminal">Restart</button>
+                        </div>
+                    </div>
+                    <div class="terminal-body" id="terminal">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-cursor">_</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Code Editor Section (Top Half) -->
+                <section class="editor-section">
+                    <div class="editor-header">
+                        <span class="editor-title">📝 Code Editor</span>
+                        <div class="editor-controls">
+                            <button class="editor-btn run-btn" id="run-code">▶ Run</button>
+                            <button class="editor-btn" id="reset-code">Reset</button>
+                            <button class="editor-btn" id="copy-code">Copy</button>
+                        </div>
+                    </div>
+                    <div class="editor-body">
+                        <textarea id="code-editor" placeholder="# Write your Python code here..."></textarea>
+                    </div>
+                </section>
+
+                <!-- Output Window Section (Bottom Half) -->
+                <section class="output-section">
+                    <div class="output-header">
+                        <span class="output-title">📤 Output</span>
+                        <div class="output-controls">
+                            <button class="output-btn" id="clear-output">Clear</button>
+                            <button class="output-btn" id="export-output">Export</button>
+                        </div>
+                    </div>
+                    <div class="output-body" id="output-window">
+                        <div class="output-placeholder">Output will appear here when you run your code...</div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="footer-info">
+                <span>Progress: 0/10 completed</span>
+                <span>Time: <span id="timer">00:00</span></span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="lesson-app.js"></script>
+</body>
+</html>
